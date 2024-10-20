@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revolving animation - 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            /* position: absolute; */
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maincircle{
+            width: 500px;
+            height: 500px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+            /* background-color: yellow; */
+            /* position: absolute; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: rotate 500s linear infinite normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .earth{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(23, 110, 164);
+            box-shadow: 0px 0px 5px 3px slateblue;
+            border-radius: 50%;
+            position: absolute;
+            left: -25px;
+            animation: rotate 90s linear infinite normal;
+        }
+        .sun{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 150, 3, 0.89);
+            border-radius: 50%;
+            box-shadow: 0px 0px 7px 3px #ffca00;
+        }
+
+        .moon{
+            width: 25px;
+            height: 25px;
+            background-color: whitesmoke;
+            border-radius: 50%;
+            position: relative;
+            left: -35px;
+            
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(36000deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="maincircle">
+            <div class="sun"></div>
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
