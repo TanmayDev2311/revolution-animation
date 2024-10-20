@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>revolving animation - 2</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             background-color: black;
             /* position: absolute; */
         }
-        .container{
+
+        .container {
             width: 100vw;
             height: 100vh;
             margin: 0px;
@@ -22,7 +25,8 @@
             align-items: center;
             justify-content: center;
         }
-        .maincircle{
+
+        .maincircle {
             width: 500px;
             height: 500px;
             border: 2px solid white;
@@ -37,7 +41,7 @@
             align-items: center;
         }
 
-        .earth{
+        .earth {
             width: 50px;
             height: 50px;
             background-color: rgb(23, 110, 164);
@@ -47,7 +51,8 @@
             left: -25px;
             animation: rotate 90s linear infinite normal;
         }
-        .sun{
+
+        .sun {
             width: 200px;
             height: 200px;
             background-color: rgba(255, 150, 3, 0.89);
@@ -55,27 +60,53 @@
             box-shadow: 0px 0px 7px 3px #ffca00;
         }
 
-        .moon{
+        .moon {
             width: 25px;
             height: 25px;
             background-color: whitesmoke;
             border-radius: 50%;
             position: relative;
             left: -35px;
-            
+
         }
 
         @keyframes rotate {
-            from{
+            from {
                 transform: rotate(0deg);
             }
-            to{
+
+            to {
                 transform: rotate(36000deg);
             }
         }
 
+        @media only screen and (max-width:700px) {
+            /* body {
+                background-color: rgb(27, 62, 73);
+            } */
+
+            .maincircle {
+                width: 250px;
+                height: 250px;
+            }
+
+            .sun {
+                width: 100px;
+                height: 100px;
+            }
+            .earth{
+                width: 25px;
+                height: 25px;
+                left: -10px;
+            }
+            .moon{
+                width: 12.5px;
+                height: 12.5px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
 
@@ -87,4 +118,5 @@
         </div>
     </div>
 </body>
+
 </html>
